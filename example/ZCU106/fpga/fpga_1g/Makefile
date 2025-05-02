@@ -12,8 +12,8 @@ FPGA_TOP = fpga
 FPGA_ARCH = zynquplus
 
 # Files for synthesis
-SYN_FILES = /mnt/c/Users/leezz/OneDrive/Documents/UCSD/SP25/CSE145/taxi/rtl/fpga.sv
-SYN_FILES += /mnt/c/Users/leezz/OneDrive/Documents/UCSD/SP25/CSE145/taxi/rtl/fpga_core.sv
+SYN_FILES = /mnt/c/Users/leezz/OneDrive/Documents/UCSD/SP25/CSE145/taxi/example/ZCU106/fpga/rtl/fpga.sv
+SYN_FILES += /mnt/c/Users/leezz/OneDrive/Documents/UCSD/SP25/CSE145/taxi/example/ZCU106/fpga/rtl/fpga_core.sv
 SYN_FILES += /mnt/c/Users/leezz/OneDrive/Documents/UCSD/SP25/CSE145/taxi/rtl/eth/taxi_eth_mac_1g_fifo.f
 SYN_FILES += /mnt/c/Users/leezz/OneDrive/Documents/UCSD/SP25/CSE145/taxi/rtl/xfcp/taxi_xfcp_if_uart.f
 SYN_FILES += /mnt/c/Users/leezz/OneDrive/Documents/UCSD/SP25/CSE145/taxi/rtl/xfcp/taxi_xfcp_switch.sv
