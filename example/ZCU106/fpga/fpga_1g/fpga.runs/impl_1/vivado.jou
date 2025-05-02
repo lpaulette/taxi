@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri May  2 03:41:59 2025
+# Process ID         : 87908
+# Current directory  : C:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.runs/impl_1
+# Command line       : vivado.exe -log fpga.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source fpga.tcl -notrace
+# Log file           : C:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.runs/impl_1/fpga.vdi
+# Journal file       : C:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.runs/impl_1\vivado.jou
+# Running On         : Lisa
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-1255U
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16849 MB
+# Swap memory        : 17371 MB
+# Total Virtual      : 34220 MB
+# Available Virtual  : 6484 MB
+#-----------------------------------------------------------
+source fpga.tcl -notrace

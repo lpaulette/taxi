@@ -1,0 +1,210 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date             : Fri May  2 03:46:26 2025
+| Host             : Lisa running 64-bit major release  (build 9200)
+| Command          : report_power -file fpga_power_routed.rpt -pb fpga_power_summary_routed.pb -rpx fpga_power_routed.rpx
+| Design           : fpga
+| Device           : xczu7ev-ffvc1156-2-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 1.109        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.478        |
+| Device Static (W)        | 0.631        |
+| Effective TJA (C/W)      | 1.0          |
+| Max Ambient (C)          | 98.9         |
+| Junction Temperature (C) | 26.1         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.025 |       13 |       --- |             --- |
+| CLB Logic                |     0.011 |    11271 |       --- |             --- |
+|   LUT as Logic           |     0.009 |     4107 |    230400 |            1.78 |
+|   LUT as Distributed RAM |     0.001 |      184 |    101760 |            0.18 |
+|   Register               |    <0.001 |     5195 |    460800 |            1.13 |
+|   CARRY8                 |    <0.001 |       58 |     28800 |            0.20 |
+|   LUT as Shift Register  |    <0.001 |       42 |    101760 |            0.04 |
+|   Others                 |     0.000 |      349 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |        2 |    230400 |           <0.01 |
+| Signals                  |     0.011 |     8706 |       --- |             --- |
+| Block RAM                |     0.021 |       23 |       312 |            7.37 |
+| MMCM                     |     0.101 |        0 |       --- |             --- |
+| I/O                      |     0.014 |       24 |       360 |            6.67 |
+| GTH                      |     0.295 |        2 |        20 |           10.00 |
+| Static Power             |     0.631 |          |           |                 |
+| Total                    |     1.109 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint          |       0.850 |     0.231 |       0.093 |      0.138 |       NA    | Unspecified | NA         |
+| Vccint_io       |       0.850 |     0.071 |       0.001 |      0.070 |       NA    | Unspecified | NA         |
+| Vccbram         |       0.850 |     0.004 |       0.002 |      0.002 |       NA    | Unspecified | NA         |
+| Vccaux          |       1.800 |     0.204 |       0.056 |      0.148 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.062 |       0.007 |      0.055 |       NA    | Unspecified | NA         |
+| Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18          |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135         |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12          |       1.200 |     0.001 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP     |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTLP     |       0.850 |     0.005 |       0.000 |      0.005 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVCC    |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP_DDR |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSPLL       |       1.200 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVTT    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSDDR_504  |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSAUX       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VCC_PSBATT      |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSDDR_PLL   |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO0_500  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO1_501  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO2_502  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO3_503  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSADC       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VCCINT_VCU      |       0.900 |     0.025 |       0.000 |      0.025 |       NA    | Unspecified | NA         |
+| MGTAVcc         |       0.900 |     0.077 |       0.067 |      0.010 |       NA    | Unspecified | NA         |
+| MGTAVtt         |       1.200 |     0.209 |       0.186 |      0.023 |       NA    | Unspecified | NA         |
+| MGTVccaux       |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.0                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 1.5                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                                                                                                                                                                                                                                                     | Domain                                                                                                                                                                                                                                                                                                                                     | Constraint (ns) |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| clk_125mhz                                                                                                                                                                                                                                                                                                                                                | clk_125mhz_p                                                                                                                                                                                                                                                                                                                               |             8.0 |
+| clk_125mhz_mmcm_out                                                                                                                                                                                                                                                                                                                                       | clk_125mhz_mmcm_out                                                                                                                                                                                                                                                                                                                        |             8.0 |
+| clk_62mhz_mmcm_out                                                                                                                                                                                                                                                                                                                                        | clk_62mhz_mmcm_out                                                                                                                                                                                                                                                                                                                         |            16.0 |
+| rxoutclkpcs_out[0]                                                                                                                                                                                                                                                                                                                                        | sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/rxoutclkpcs_out[0]                                                               |            16.0 |
+| rxoutclkpcs_out[0]_1                                                                                                                                                                                                                                                                                                                                      | sfp_phy.sfp1_pcspma/inst/transceiver_inst/basex_pcs_pma_1_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_1_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/rxoutclkpcs_out[0]                                                                               |            16.0 |
+| sfp_mgt_refclk_0                                                                                                                                                                                                                                                                                                                                          | sfp_mgt_refclk_0_p                                                                                                                                                                                                                                                                                                                         |             6.4 |
+| sfp_phy.sfp0_gmii_txuserclk                                                                                                                                                                                                                                                                                                                               | sfp_phy.sfp0_pcspma/inst/core_clocking_i/userclk                                                                                                                                                                                                                                                                                           |            16.0 |
+| sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_tx_i/txoutclkmon |            16.0 |
+| sfp_phy.sfp1_pcspma/inst/transceiver_inst/basex_pcs_pma_1_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_1_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O                 | sfp_phy.sfp1_pcspma/inst/transceiver_inst/basex_pcs_pma_1_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_1_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_tx_i/txoutclkmon                 |            16.0 |
+| txoutclk_out[0]                                                                                                                                                                                                                                                                                                                                           | sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/txoutclk_out[0]                                                                  |             8.0 |
+| txoutclk_out[0]_1                                                                                                                                                                                                                                                                                                                                         | sfp_phy.sfp1_pcspma/inst/transceiver_inst/basex_pcs_pma_1_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_1_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/txoutclk_out[0]                                                                                  |             8.0 |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| fpga                          |     0.478 |
+|   clk_125mhz_ibufg_inst       |     0.003 |
+|   core_inst                   |     0.058 |
+|     sfp_mac.sfp0_eth_mac_inst |     0.016 |
+|       eth_mac_1g_inst         |     0.009 |
+|       rx_fifo                 |     0.004 |
+|       tx_fifo                 |     0.004 |
+|     sfp_mac.sfp1_eth_mac_inst |     0.016 |
+|       eth_mac_1g_inst         |     0.009 |
+|       rx_fifo                 |     0.004 |
+|       tx_fifo                 |     0.004 |
+|     stat_mux_inst             |     0.001 |
+|     xfcp_if_uart_inst         |     0.006 |
+|       cobs_encode_inst        |     0.003 |
+|       rx_fifo_inst            |     0.001 |
+|       tx_fifo_inst            |     0.001 |
+|     xfcp_stats_inst           |     0.017 |
+|       stats_counter_inst      |     0.007 |
+|       stats_strings_inst      |     0.006 |
+|       xfcp_mod_axil_inst      |     0.001 |
+|       xfcp_mod_axil_inst__0   |     0.001 |
+|       xfcp_sw_inst            |     0.001 |
+|   sfp_phy.sfp0_pcspma         |     0.158 |
+|     inst                      |     0.158 |
+|       core_clocking_i         |     0.006 |
+|       pcs_pma_block_i         |     0.153 |
+|   sfp_phy.sfp1_pcspma         |     0.153 |
+|     inst                      |     0.153 |
+|       basex_pcs_pma_1_core    |     0.001 |
+|       transceiver_inst        |     0.151 |
++-------------------------------+-----------+
+
+

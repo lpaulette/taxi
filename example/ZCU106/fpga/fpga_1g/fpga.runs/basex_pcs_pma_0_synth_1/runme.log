@@ -1,0 +1,685 @@
+
+*** Running vivado
+    with args -log basex_pcs_pma_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source basex_pcs_pma_0.tcl
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Fri May  2 03:36:54 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source basex_pcs_pma_0.tcl -notrace
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: basex_pcs_pma_0
+Command: synth_design -top basex_pcs_pma_0 -part xczu7ev-ffvc1156-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 101088
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1752.379 ; gain = 184.387
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'basex_pcs_pma_0' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0.v:83]
+INFO: [Synth 8-6157] synthesizing module 'basex_pcs_pma_0_support' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_support.v:58]
+	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'basex_pcs_pma_0_block' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:84]
+	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
+WARNING: [Synth 8-7071] port 's_axi_aclk' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_resetn' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_awaddr' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_awvalid' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_awready' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_wdata' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_wvalid' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_wready' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_bresp' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_bvalid' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_bready' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_araddr' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_arvalid' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_arready' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_rdata' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_rresp' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_rvalid' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7071] port 's_axi_rready' of module 'gig_ethernet_pcs_pma_v16_2_21' is unconnected for instance 'basex_pcs_pma_0_core' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+WARNING: [Synth 8-7023] instance 'basex_pcs_pma_0_core' of module 'gig_ethernet_pcs_pma_v16_2_21' has 94 connections declared, but only 76 given [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:206]
+INFO: [Synth 8-6157] synthesizing module 'basex_pcs_pma_0_transceiver' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/transceiver/basex_pcs_pma_0_transceiver.v:61]
+	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'basex_pcs_pma_0_reset_sync' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_reset_sync.v:62]
+INFO: [Synth 8-6157] synthesizing module 'FDP' [C:/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43115]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'FDP' (0#1) [C:/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43115]
+INFO: [Synth 8-6155] done synthesizing module 'basex_pcs_pma_0_reset_sync' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_reset_sync.v:62]
+INFO: [Synth 8-6157] synthesizing module 'basex_pcs_pma_0_gt' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/basex_pcs_pma_0_gt.v:53]
+INFO: [Synth 8-6157] synthesizing module 'basex_pcs_pma_0_gt_gtwizard_top' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/basex_pcs_pma_0_gt_gtwizard_top.v:173]
+INFO: [Synth 8-6157] synthesizing module 'basex_pcs_pma_0_gt_gtwizard_gthe4' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/basex_pcs_pma_0_gt_gtwizard_gthe4.v:141]
+INFO: [Synth 8-6157] synthesizing module 'basex_pcs_pma_0_gt_gthe4_channel_wrapper' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/basex_pcs_pma_0_gt_gthe4_channel_wrapper.v:56]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_19_gthe4_channel' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/gtwizard_ultrascale_v1_7_gthe4_channel.v:53]
+INFO: [Synth 8-6157] synthesizing module 'GTHE4_CHANNEL' [C:/Vivado/2024.2/scripts/rt/data/unisim_comp.v:47636]
+INFO: [Synth 8-6155] done synthesizing module 'GTHE4_CHANNEL' (0#1) [C:/Vivado/2024.2/scripts/rt/data/unisim_comp.v:47636]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_19_gthe4_channel' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/gtwizard_ultrascale_v1_7_gthe4_channel.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'basex_pcs_pma_0_gt_gthe4_channel_wrapper' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/basex_pcs_pma_0_gt_gthe4_channel_wrapper.v:56]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_19_reset_synchronizer' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_sync.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_19_reset_synchronizer' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_sync.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_19_bit_synchronizer' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_bit_sync.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_19_bit_synchronizer' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_bit_sync.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_tx' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'BUFG_GT' [C:/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2853]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG_GT' (0#1) [C:/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2853]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_freq_counter' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_freq_counter' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_tx' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_rx' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_rx' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_19_gte4_drp_arb' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gte4_drp_arb.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_19_gte4_drp_arb' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gte4_drp_arb.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_19_gthe4_delay_powergood' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:53]
+INFO: [Synth 8-226] default block is never used [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:136]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_19_gthe4_delay_powergood' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_19_gtwiz_reset' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:53]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:162]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_19_reset_inv_synchronizer' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_19_reset_inv_synchronizer' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_19_gtwiz_reset' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_19_gtwiz_userdata_tx' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_tx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_19_gtwiz_userdata_tx' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_tx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_rx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_rx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'basex_pcs_pma_0_gt_gtwizard_gthe4' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/basex_pcs_pma_0_gt_gtwizard_gthe4.v:141]
+INFO: [Synth 8-6155] done synthesizing module 'basex_pcs_pma_0_gt_gtwizard_top' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/basex_pcs_pma_0_gt_gtwizard_top.v:173]
+INFO: [Synth 8-6155] done synthesizing module 'basex_pcs_pma_0_gt' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/basex_pcs_pma_0_gt.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'basex_pcs_pma_0_transceiver' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/transceiver/basex_pcs_pma_0_transceiver.v:61]
+WARNING: [Synth 8-7071] port 'gt0_rxbyteisaligned_out' of module 'basex_pcs_pma_0_transceiver' is unconnected for instance 'transceiver_inst' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:301]
+WARNING: [Synth 8-7071] port 'gt0_rxbyterealign_out' of module 'basex_pcs_pma_0_transceiver' is unconnected for instance 'transceiver_inst' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:301]
+WARNING: [Synth 8-7023] instance 'transceiver_inst' of module 'basex_pcs_pma_0_transceiver' has 79 connections declared, but only 77 given [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:301]
+INFO: [Synth 8-6157] synthesizing module 'basex_pcs_pma_0_sync_block' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_sync_block.v:62]
+INFO: [Synth 8-6157] synthesizing module 'FD' [C:/Vivado/2024.2/scripts/rt/data/unisim_comp.v:42947]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FD' (0#1) [C:/Vivado/2024.2/scripts/rt/data/unisim_comp.v:42947]
+INFO: [Synth 8-6155] done synthesizing module 'basex_pcs_pma_0_sync_block' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_sync_block.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'basex_pcs_pma_0_block' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_block.v:84]
+INFO: [Synth 8-6157] synthesizing module 'basex_pcs_pma_0_clocking' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:63]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE4' [C:/Vivado/2024.2/scripts/rt/data/unisim_comp.v:76017]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE4' (0#1) [C:/Vivado/2024.2/scripts/rt/data/unisim_comp.v:76017]
+WARNING: [Synth 8-7071] port 'CEMASK' of module 'BUFG_GT' is unconnected for instance 'usrclk2_bufg_inst' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:102]
+WARNING: [Synth 8-7071] port 'CLR' of module 'BUFG_GT' is unconnected for instance 'usrclk2_bufg_inst' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:102]
+WARNING: [Synth 8-7071] port 'CLRMASK' of module 'BUFG_GT' is unconnected for instance 'usrclk2_bufg_inst' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:102]
+WARNING: [Synth 8-7071] port 'DIV' of module 'BUFG_GT' is unconnected for instance 'usrclk2_bufg_inst' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:102]
+WARNING: [Synth 8-7023] instance 'usrclk2_bufg_inst' of module 'BUFG_GT' has 7 connections declared, but only 3 given [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:102]
+WARNING: [Synth 8-7071] port 'CEMASK' of module 'BUFG_GT' is unconnected for instance 'usrclk_bufg_inst' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:108]
+WARNING: [Synth 8-7071] port 'CLR' of module 'BUFG_GT' is unconnected for instance 'usrclk_bufg_inst' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:108]
+WARNING: [Synth 8-7071] port 'CLRMASK' of module 'BUFG_GT' is unconnected for instance 'usrclk_bufg_inst' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:108]
+WARNING: [Synth 8-7023] instance 'usrclk_bufg_inst' of module 'BUFG_GT' has 7 connections declared, but only 4 given [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:108]
+WARNING: [Synth 8-7071] port 'CEMASK' of module 'BUFG_GT' is unconnected for instance 'rxrecclk_bufg_inst' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:122]
+WARNING: [Synth 8-7071] port 'CLR' of module 'BUFG_GT' is unconnected for instance 'rxrecclk_bufg_inst' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:122]
+WARNING: [Synth 8-7071] port 'CLRMASK' of module 'BUFG_GT' is unconnected for instance 'rxrecclk_bufg_inst' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:122]
+WARNING: [Synth 8-7071] port 'DIV' of module 'BUFG_GT' is unconnected for instance 'rxrecclk_bufg_inst' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:122]
+WARNING: [Synth 8-7023] instance 'rxrecclk_bufg_inst' of module 'BUFG_GT' has 7 connections declared, but only 3 given [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:122]
+INFO: [Synth 8-6155] done synthesizing module 'basex_pcs_pma_0_clocking' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocking.v:63]
+INFO: [Synth 8-6157] synthesizing module 'basex_pcs_pma_0_resets' [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_resets.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'basex_pcs_pma_0_resets' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_resets.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'basex_pcs_pma_0_support' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_support.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'basex_pcs_pma_0' (0#1) [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0.v:83]
+WARNING: [Synth 8-3301] Unused top level parameter/generic SFP_RATE
+WARNING: [Synth 8-7137] Register freq_cnt_o_reg in module gtwizard_ultrascale_v1_7_19_gthe4_cpll_cal_freq_counter has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v:188]
+WARNING: [Synth 8-6014] Unused sequential element mask_reg was removed.  [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:1077]
+WARNING: [Synth 8-7129] Port mmcm_reset in module basex_pcs_pma_0_clocking is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[127] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[126] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[125] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[124] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[123] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[122] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[121] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[120] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[119] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[118] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[117] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[116] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[115] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[114] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[113] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[112] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[111] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[110] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[109] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[108] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[107] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[106] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[105] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[104] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[103] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[102] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[101] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[100] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[99] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[98] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[97] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[96] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[95] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[94] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[93] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[92] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[91] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[90] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[89] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[88] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[87] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[86] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[85] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[84] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[83] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[82] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[81] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[80] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[79] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[78] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[77] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[76] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[75] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[74] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[73] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[72] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[71] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[70] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[69] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[68] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[67] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[66] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[65] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[64] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[63] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[62] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[61] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[60] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[59] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[58] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[57] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[56] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[55] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[54] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[53] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[52] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[51] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[50] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[49] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[48] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[47] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[46] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[45] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[44] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[43] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[42] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[41] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[40] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[39] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[38] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[37] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[36] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[35] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[34] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[33] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[32] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[31] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[30] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rxdata_in[29] in module gtwizard_ultrascale_v1_7_19_gtwiz_userdata_rx is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1917.539 ; gain = 349.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1917.539 ; gain = 349.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1917.539 ; gain = 349.547
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1917.539 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2015.598 ; gain = 0.312
+Finished Parsing XDC File [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/basex_pcs_pma_0_gt.xdc] for cell 'inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst'
+Finished Parsing XDC File [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/basex_pcs_pma_0_gt.xdc] for cell 'inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/basex_pcs_pma_0_gt.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/basex_pcs_pma_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/basex_pcs_pma_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/basex_pcs_pma_0_board.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/basex_pcs_pma_0_board.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocks.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0_clocks.xdc] for cell 'inst'
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.runs/basex_pcs_pma_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.runs/basex_pcs_pma_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.runs/basex_pcs_pma_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/basex_pcs_pma_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/basex_pcs_pma_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/synth/basex_pcs_pma_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/basex_pcs_pma_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/basex_pcs_pma_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2015.598 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 38 instances were transformed.
+  FD => FDRE: 12 instances
+  FDP => FDPE: 24 instances
+  SRL16 => SRL16E: 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 2015.738 ; gain = 0.141
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 2015.738 ; gain = 447.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 2015.738 ; gain = 447.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property keep_hierarchy = soft for inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst. (constraint file  c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/synth/basex_pcs_pma_0_gt.xdc, line 80).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst. (constraint file  C:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.runs/basex_pcs_pma_0_synth_1/dont_touch.xdc, line 13).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.runs/basex_pcs_pma_0_synth_1/dont_touch.xdc, line 17).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 2015.738 ; gain = 447.746
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'STATE_reg' in module 'SYNCHRONISE'
+INFO: [Synth 8-802] inferred FSM for state register 'USE_ROCKET_IO.TX_RST_SM_reg' in module 'GPCS_PMA_GEN'
+INFO: [Synth 8-802] inferred FSM for state register 'USE_ROCKET_IO.RX_RST_SM_TXOUTCLK.RX_RST_SM_reg' in module 'GPCS_PMA_GEN'
+WARNING: [Synth 8-3936] Found unconnected internal register 'progclk_sel_store_reg' and it is trimmed from '16' to '15' bits. [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:705]
+WARNING: [Synth 8-3936] Found unconnected internal register 'x0e1_store_reg' and it is trimmed from '16' to '15' bits. [c:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.gen/sources_1/ip/basex_pcs_pma_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v:778]
+INFO: [Synth 8-802] inferred FSM for state register 'arb_state_reg' in module 'gtwizard_ultrascale_v1_7_19_gte4_drp_arb'
+INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_all_reg' in module 'gtwizard_ultrascale_v1_7_19_gtwiz_reset'
+INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_tx_reg' in module 'gtwizard_ultrascale_v1_7_19_gtwiz_reset'
+INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_rx_reg' in module 'gtwizard_ultrascale_v1_7_19_gtwiz_reset'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            loss_of_sync |                    0000000000100 |                             0000
+          comma_detect_1 |                    0010000000000 |                             0001
+           aquire_sync_1 |                    0000000010000 |                             0010
+          comma_detect_2 |                    0000000000001 |                             0011
+           aquire_sync_2 |                    0000000000010 |                             0100
+          comma_detect_3 |                    0000000001000 |                             0101
+         sync_acquired_1 |                    1000000000000 |                             0110
+         sync_acquired_2 |                    0001000000000 |                             0111
+        sync_acquired_2a |                    0100000000000 |                             1000
+         sync_acquired_3 |                    0000001000000 |                             1001
+        sync_acquired_3a |                    0000100000000 |                             1010
+         sync_acquired_4 |                    0000010000000 |                             1011
+        sync_acquired_4a |                    0000000100000 |                             1100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'STATE_reg' using encoding 'one-hot' in module 'SYNCHRONISE'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  "0000" |                  000000000000001 |                             0000
+                  "0001" |                  000000000000010 |                             0001
+                  "0010" |                  000000000000100 |                             0010
+                  "0011" |                  000000000001000 |                             0011
+                  "0100" |                  000000000010000 |                             0100
+                  "0101" |                  000000000100000 |                             0101
+                  "0110" |                  000000001000000 |                             0110
+                  "0111" |                  000000010000000 |                             0111
+                  "1000" |                  000000100000000 |                             1000
+                  "1001" |                  000001000000000 |                             1001
+                  "1010" |                  000010000000000 |                             1010
+                  "1011" |                  000100000000000 |                             1011
+                  "1100" |                  001000000000000 |                             1100
+                  "1101" |                  010000000000000 |                             1101
+                  iSTATE |                  100000000000000 |                             1110
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'USE_ROCKET_IO.RX_RST_SM_TXOUTCLK.RX_RST_SM_reg' using encoding 'one-hot' in module 'GPCS_PMA_GEN'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  "0000" |                  000000000000001 |                             0000
+                  "0001" |                  000000000000010 |                             0001
+                  "0010" |                  000000000000100 |                             0010
+                  "0011" |                  000000000001000 |                             0011
+                  "0100" |                  000000000010000 |                             0100
+                  "0101" |                  000000000100000 |                             0101
+                  "0110" |                  000000001000000 |                             0110
+                  "0111" |                  000000010000000 |                             0111
+                  "1000" |                  000000100000000 |                             1000
+                  "1001" |                  000001000000000 |                             1001
+                  "1010" |                  000010000000000 |                             1010
+                  "1011" |                  000100000000000 |                             1011
+                  "1100" |                  001000000000000 |                             1100
+                  "1101" |                  010000000000000 |                             1101
+                  iSTATE |                  100000000000000 |                             1110
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'USE_ROCKET_IO.TX_RST_SM_reg' using encoding 'one-hot' in module 'GPCS_PMA_GEN'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               ARB_START |                             0001 |                             0001
+                ARB_WAIT |                             0010 |                             0010
+              ARB_REPORT |                             0100 |                             0100
+                 ARB_INC |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'arb_state_reg' in module 'gtwizard_ultrascale_v1_7_19_gte4_drp_arb'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+      ST_RESET_TX_BRANCH |                              000 |                              000
+         ST_RESET_TX_PLL |                              001 |                              001
+    ST_RESET_TX_DATAPATH |                              010 |                              010
+   ST_RESET_TX_WAIT_LOCK |                              011 |                              011
+ST_RESET_TX_WAIT_USERRDY |                              100 |                              100
+ST_RESET_TX_WAIT_RESETDONE |                              101 |                              101
+        ST_RESET_TX_IDLE |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_tx_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_19_gtwiz_reset'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+      ST_RESET_RX_BRANCH |                              000 |                              000
+         ST_RESET_RX_PLL |                              001 |                              001
+    ST_RESET_RX_DATAPATH |                              010 |                              010
+   ST_RESET_RX_WAIT_LOCK |                              011 |                              011
+    ST_RESET_RX_WAIT_CDR |                              100 |                              100
+ST_RESET_RX_WAIT_USERRDY |                              101 |                              101
+ST_RESET_RX_WAIT_RESETDONE |                              110 |                              110
+        ST_RESET_RX_IDLE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_rx_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_19_gtwiz_reset'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+       ST_RESET_ALL_INIT |                              000 |                              000
+     ST_RESET_ALL_BRANCH |                              001 |                              001
+     ST_RESET_ALL_TX_PLL |                              010 |                              010
+ST_RESET_ALL_TX_PLL_WAIT |                              011 |                              011
+      ST_RESET_ALL_RX_DP |                              100 |                              100
+     ST_RESET_ALL_RX_PLL |                              101 |                              101
+    ST_RESET_ALL_RX_WAIT |                              110 |                              110
+                  iSTATE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_all_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_19_gtwiz_reset'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 2015.738 ; gain = 447.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   25 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 1     
+	   3 Input   18 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	               48 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
+	               30 Bit    Registers := 1     
+	               25 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 13    
+	               15 Bit    Registers := 2     
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 16    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 12    
+	                2 Bit    Registers := 23    
+	                1 Bit    Registers := 337   
++---Muxes : 
+	   5 Input   48 Bit        Muxes := 1     
+	   2 Input   48 Bit        Muxes := 2     
+	  33 Input   32 Bit        Muxes := 1     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   30 Bit        Muxes := 3     
+	   2 Input   28 Bit        Muxes := 1     
+	   2 Input   27 Bit        Muxes := 1     
+	   2 Input   26 Bit        Muxes := 1     
+	  33 Input   25 Bit        Muxes := 1     
+	   2 Input   25 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 1     
+	   2 Input   23 Bit        Muxes := 1     
+	   4 Input   22 Bit        Muxes := 1     
+	   2 Input   21 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 1     
+	   2 Input   19 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 4     
+	  33 Input   16 Bit        Muxes := 2     
+	   4 Input   16 Bit        Muxes := 1     
+	  15 Input   15 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 1     
+	  13 Input   13 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 19    
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 5     
+	   4 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 2     
+	   5 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 7     
+	   3 Input    8 Bit        Muxes := 2     
+	   8 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 4     
+	   3 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   6 Input    5 Bit        Muxes := 1     
+	   3 Input    5 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	  33 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 16    
+	   5 Input    3 Bit        Muxes := 2     
+	   7 Input    3 Bit        Muxes := 2     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 37    
+	   4 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 7     
+	  15 Input    1 Bit        Muxes := 2     
+	  33 Input    1 Bit        Muxes := 18    
+	   8 Input    1 Bit        Muxes := 29    
+	   7 Input    1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3332] Sequential element (gpcs_pma_inst/FSM_onehot_USE_ROCKET_IO.RX_RST_SM_TXOUTCLK.RX_RST_SM_reg[14]) is unused and will be removed from module gig_ethernet_pcs_pma_v16_2_21.
+INFO: [Synth 8-3332] Sequential element (gpcs_pma_inst/FSM_onehot_USE_ROCKET_IO.TX_RST_SM_reg[14]) is unused and will be removed from module gig_ethernet_pcs_pma_v16_2_21.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 2015.738 ; gain = 447.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 2642.957 ; gain = 1074.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:04 . Memory (MB): peak = 2663.625 ; gain = 1095.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:01:06 . Memory (MB): peak = 2684.852 ; gain = 1116.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:11 . Memory (MB): peak = 2878.965 ; gain = 1310.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:11 . Memory (MB): peak = 2878.965 ; gain = 1310.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:11 . Memory (MB): peak = 2878.965 ; gain = 1310.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:11 . Memory (MB): peak = 2878.965 ; gain = 1310.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:11 . Memory (MB): peak = 2878.965 ; gain = 1310.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:01:11 . Memory (MB): peak = 2878.965 ; gain = 1310.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------------------+------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                   | RTL Name                                                               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------------------+------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|gig_ethernet_pcs_pma_v16_2_21 | gpcs_pma_inst/RX_GMII_AT_TXOUTCLK.RECEIVER_TXOUTCLK/RXDATA_REG5_reg[7] | 5      | 8     | NO           | NO                 | NO                | 8      | 0       | 
++------------------------------+------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |BUFG_GT       |     4|
+|2     |CARRY8        |    15|
+|3     |GTHE4_CHANNEL |     1|
+|4     |IBUFDS_GTE4   |     1|
+|5     |LUT1          |    31|
+|6     |LUT2          |   120|
+|7     |LUT3          |   104|
+|8     |LUT4          |   101|
+|9     |LUT5          |    80|
+|10    |LUT6          |   147|
+|11    |MUXF7         |     1|
+|12    |SRL16         |     2|
+|13    |SRL16E        |     8|
+|14    |FD            |    12|
+|15    |FDCE          |    63|
+|16    |FDP           |    24|
+|17    |FDPE          |    64|
+|18    |FDRE          |   822|
+|19    |FDSE          |    31|
++------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:11 . Memory (MB): peak = 2878.965 ; gain = 1310.973
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 890 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:01:01 . Memory (MB): peak = 2878.965 ; gain = 1212.773
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:12 . Memory (MB): peak = 2878.965 ; gain = 1310.973
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2878.965 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC for BUFG_GT inst/core_clocking_i/rxrecclk_bufg_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_1 for BUFG_GT inst/core_clocking_i/usrclk2_bufg_inst
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2878.965 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 38 instances were transformed.
+  FD => FDRE: 12 instances
+  FDP => FDPE: 24 instances
+  SRL16 => SRL16E: 2 instances
+
+Synth Design complete | Checksum: af3d6379
+INFO: [Common 17-83] Releasing license: Synthesis
+104 Infos, 142 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:26 . Memory (MB): peak = 2878.965 ; gain = 2453.785
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2878.965 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.runs/basex_pcs_pma_0_synth_1/basex_pcs_pma_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP basex_pcs_pma_0, cache-ID = 5798e3d6b9c6fc68
+INFO: [Coretcl 2-1174] Renamed 48 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2878.965 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/leezz/OneDrive/taxi/example/ZCU106/fpga/fpga_1g/fpga.runs/basex_pcs_pma_0_synth_1/basex_pcs_pma_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file basex_pcs_pma_0_utilization_synth.rpt -pb basex_pcs_pma_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri May  2 03:38:30 2025...

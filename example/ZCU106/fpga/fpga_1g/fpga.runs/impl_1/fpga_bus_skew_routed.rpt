@@ -1,0 +1,1998 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date              : Fri May  2 03:46:29 2025
+| Host              : Lisa running 64-bit major release  (build 9200)
+| Command           : report_bus_skew -warn_on_violation -file fpga_bus_skew_routed.rpt -pb fpga_bus_skew_routed.pb -rpx fpga_bus_skew_routed.rpx
+| Design            : fpga
+| Device            : xczu7ev-ffvc1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+Table of Contents
+-----------------
+1. Bus Skew Report Summary
+2. Bus Skew Report Per Constraint
+
+1. Bus Skew Report Summary
+--------------------------
+
+Id  Position  From                            To                              Corner  Requirement(ns)  Actual(ns)  Slack(ns)
+--  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
+1   64        [get_cells {{core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[*]}}]
+                                              [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[*]}]
+                                                                              Slow              8.000       0.369      7.631
+2   66        [get_cells -quiet {{core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[*]}}]
+                                              [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[*]}]
+                                                                              Slow              8.000       0.652      7.348
+3   69        [get_cells {{core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[*]}}]
+                                              [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[*]}]
+                                                                              Slow              8.000       0.327      7.673
+4   71        [get_cells -quiet {{core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[*]}}]
+                                              [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[*]}]
+                                                                              Slow              8.000       0.394      7.606
+5   74        [get_cells {{core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_reg_reg[*]}}]
+                                              [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[*]}]
+                                                                              Slow              8.000       0.439      7.561
+6   76        [get_cells -quiet {core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[*]}]
+                                              [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[*]}]
+                                                                              Slow              8.000       0.647      7.353
+7   80        [get_cells {{core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[*]}}]
+                                              [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[*]}]
+                                                                              Slow              8.000       0.970      7.030
+8   82        [get_cells -quiet {core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[*]}]
+                                              [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[*]}]
+                                                                              Slow              8.000       0.626      7.374
+9   86        [get_cells {{core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[*]}}]
+                                              [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[*]}]
+                                                                              Slow              8.000       0.797      7.203
+10  88        [get_cells -quiet {{core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[*]}}]
+                                              [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[*]}]
+                                                                              Slow              8.000       0.846      7.154
+11  91        [get_cells {{core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[*]}}]
+                                              [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[*]}]
+                                                                              Slow              8.000       0.714      7.286
+12  93        [get_cells -quiet {{core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[*]}}]
+                                              [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[*]}]
+                                                                              Slow              8.000       0.618      7.382
+13  96        [get_cells {{core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_reg_reg[*]}}]
+                                              [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[*]}]
+                                                                              Slow              8.000       0.794      7.206
+14  98        [get_cells -quiet {core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[*]}]
+                                              [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[*]}]
+                                                                              Slow              8.000       0.550      7.450
+15  102       [get_cells {{core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[*]}}]
+                                              [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[*]}]
+                                                                              Slow              8.000       0.481      7.519
+16  104       [get_cells -quiet {core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[*]}]
+                                              [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[*]}]
+                                                                              Slow              8.000       0.554      7.446
+
+
+2. Bus Skew Report Per Constraint
+---------------------------------
+
+Id: 1
+set_bus_skew -from [get_cells {{core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[*]}}] -to [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 6
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_125mhz_mmcm_out   txoutclk_out[0]       core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[2]/D
+                                                                            core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[5]/D
+                                                                                                            Slow         0.369      7.631
+
+
+Slack (MET) :             7.631ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Endpoint Destination:   core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Source:       core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Destination:  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:    2.615ns
+  Reference Relative Delay:   2.348ns
+  Relative CRPR:             -0.102ns
+  Actual Bus Skew:            0.369ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.346     3.695    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/clk_125mhz_int
+    SLICE_X101Y128       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X101Y128       FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.079     3.774 r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[2]/Q
+                         net (fo=2, routed)           0.349     4.123    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/D[2]
+    SLICE_X100Y129       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.270     1.483    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/userclk2_out
+    SLICE_X100Y129       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[2]/C
+                         clock pessimism              0.000     1.483    
+    SLICE_X100Y129       FDRE (Setup_GFF2_SLICEL_C_D)
+                                                      0.025     1.508    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[2]
+  -------------------------------------------------------------------
+                         data arrival                           4.123    
+                         clock arrival                          1.508    
+  -------------------------------------------------------------------
+                         relative delay                         2.615    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.085     3.966    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/clk_125mhz_int
+    SLICE_X101Y128       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X101Y128       FDRE (Prop_BFF_SLICEL_C_Q)
+                                                      0.059     4.025 r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[5]/Q
+                         net (fo=4, routed)           0.075     4.099    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/D[5]
+    SLICE_X100Y128       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.446     1.689    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/userclk2_out
+    SLICE_X100Y128       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[5]/C
+                         clock pessimism              0.000     1.689    
+    SLICE_X100Y128       FDRE (Hold_CFF2_SLICEL_C_D)
+                                                      0.062     1.751    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[5]
+  -------------------------------------------------------------------
+                         data arrival                           4.099    
+                         clock arrival                          1.751    
+  -------------------------------------------------------------------
+                         relative delay                         2.348    
+
+
+
+Id: 2
+set_bus_skew -from [get_cells -quiet {{core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[*]}}] -to [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 6
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+txoutclk_out[0]       clk_125mhz_mmcm_out   core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[1]/D
+                                                                            core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[3]/D
+                                                                                                            Slow         0.652      7.348
+
+
+Slack (MET) :             7.348ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Endpoint Destination:   core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Source:       core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Destination:  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:   -1.629ns
+  Reference Relative Delay:  -2.108ns
+  Relative CRPR:             -0.174ns
+  Actual Bus Skew:            0.652ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.462     1.705    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/userclk2_out
+    SLICE_X99Y130        FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X99Y130        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.079     1.784 r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[1]/Q
+                         net (fo=2, routed)           0.572     2.356    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg_n_0_[1]
+    SLICE_X100Y127       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.080     3.960    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/clk_125mhz_int
+    SLICE_X100Y127       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[1]/C
+                         clock pessimism              0.000     3.960    
+    SLICE_X100Y127       FDRE (Setup_DFF2_SLICEL_C_D)
+                                                      0.025     3.985    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[1]
+  -------------------------------------------------------------------
+                         data arrival                           2.356    
+                         clock arrival                          3.985    
+  -------------------------------------------------------------------
+                         relative delay                        -1.629    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.268     1.481    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/userclk2_out
+    SLICE_X100Y130       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X100Y130       FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.059     1.540 r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[3]/Q
+                         net (fo=2, routed)           0.102     1.642    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg_n_0_[3]
+    SLICE_X100Y127       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.339     3.688    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/clk_125mhz_int
+    SLICE_X100Y127       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[3]/C
+                         clock pessimism              0.000     3.688    
+    SLICE_X100Y127       FDRE (Hold_GFF2_SLICEL_C_D)
+                                                      0.062     3.750    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[3]
+  -------------------------------------------------------------------
+                         data arrival                           1.642    
+                         clock arrival                          3.750    
+  -------------------------------------------------------------------
+                         relative delay                        -2.108    
+
+
+
+Id: 3
+set_bus_skew -from [get_cells {{core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[*]}}] -to [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 6
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_125mhz_mmcm_out   txoutclk_out[0]       core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[1]/D
+                                                                            core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[0]/D
+                                                                                                            Slow         0.327      7.673
+
+
+Slack (MET) :             7.673ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Endpoint Destination:   core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Source:       core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Destination:  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:    2.498ns
+  Reference Relative Delay:   2.282ns
+  Relative CRPR:             -0.111ns
+  Actual Bus Skew:            0.327ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.290     3.639    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/clk_125mhz_int
+    SLICE_X98Y136        FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y136        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.079     3.718 r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[1]/Q
+                         net (fo=2, routed)           0.311     4.029    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg[1]
+    SLICE_X98Y136        FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.293     1.506    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/userclk2_out
+    SLICE_X98Y136        FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[1]/C
+                         clock pessimism              0.000     1.506    
+    SLICE_X98Y136        FDRE (Setup_HFF2_SLICEL_C_D)
+                                                      0.025     1.531    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[1]
+  -------------------------------------------------------------------
+                         data arrival                           4.029    
+                         clock arrival                          1.531    
+  -------------------------------------------------------------------
+                         relative delay                         2.498    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.041     3.921    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/clk_125mhz_int
+    SLICE_X98Y136        FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y136        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.060     3.981 r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[0]/Q
+                         net (fo=2, routed)           0.066     4.047    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg[0]
+    SLICE_X98Y135        FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.460     1.703    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/userclk2_out
+    SLICE_X98Y135        FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[0]/C
+                         clock pessimism              0.000     1.703    
+    SLICE_X98Y135        FDRE (Hold_DFF2_SLICEL_C_D)
+                                                      0.062     1.765    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[0]
+  -------------------------------------------------------------------
+                         data arrival                           4.047    
+                         clock arrival                          1.765    
+  -------------------------------------------------------------------
+                         relative delay                         2.282    
+
+
+
+Id: 4
+set_bus_skew -from [get_cells -quiet {{core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[*]}}] -to [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 6
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+txoutclk_out[0]       clk_125mhz_mmcm_out   core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[2]/D
+                                                                            core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[0]/D
+                                                                                                            Slow         0.394      7.606
+
+
+Slack (MET) :             7.606ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Endpoint Destination:   core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Source:       core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Destination:  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:   -1.781ns
+  Reference Relative Delay:  -2.059ns
+  Relative CRPR:             -0.116ns
+  Actual Bus Skew:            0.394ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.468     1.711    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/userclk2_out
+    SLICE_X99Y137        FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X99Y137        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.079     1.790 r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[2]/Q
+                         net (fo=2, routed)           0.373     2.163    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg[2]
+    SLICE_X98Y135        FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.039     3.919    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/clk_125mhz_int
+    SLICE_X98Y135        FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[2]/C
+                         clock pessimism              0.000     3.919    
+    SLICE_X98Y135        FDRE (Setup_GFF2_SLICEL_C_D)
+                                                      0.025     3.944    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[2]
+  -------------------------------------------------------------------
+                         data arrival                           2.163    
+                         clock arrival                          3.944    
+  -------------------------------------------------------------------
+                         relative delay                        -1.781    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.288     1.501    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/userclk2_out
+    SLICE_X99Y135        FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X99Y135        FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.058     1.559 r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[0]/Q
+                         net (fo=2, routed)           0.077     1.636    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg[0]
+    SLICE_X98Y135        FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.285     3.634    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/clk_125mhz_int
+    SLICE_X98Y135        FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[0]/C
+                         clock pessimism              0.000     3.634    
+    SLICE_X98Y135        FDRE (Hold_HFF2_SLICEL_C_D)
+                                                      0.062     3.696    core_inst/sfp_mac.sfp0_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[0]
+  -------------------------------------------------------------------
+                         data arrival                           1.636    
+                         clock arrival                          3.696    
+  -------------------------------------------------------------------
+                         relative delay                        -2.059    
+
+
+
+Id: 5
+set_bus_skew -from [get_cells {{core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_reg_reg[*]}}] -to [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 15
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_125mhz_mmcm_out   txoutclk_out[0]       core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[5]/D
+                                                                            core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[14]/D
+                                                                                                            Slow         0.439      7.561
+
+
+Slack (MET) :             7.561ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_reg_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Endpoint Destination:   core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Source:       core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_reg_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Destination:  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:    2.670ns
+  Reference Relative Delay:   2.423ns
+  Relative CRPR:             -0.192ns
+  Actual Bus Skew:            0.439ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.374     3.723    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X107Y112       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_reg_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y112       FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.080     3.803 r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_reg_reg[5]/Q
+                         net (fo=1, routed)           0.310     4.113    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_reg_reg_n_0_[5]
+    SLICE_X106Y116       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.205     1.418    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/userclk2_out
+    SLICE_X106Y116       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[5]/C
+                         clock pessimism              0.000     1.418    
+    SLICE_X106Y116       FDRE (Setup_DFF2_SLICEL_C_D)
+                                                      0.025     1.443    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[5]
+  -------------------------------------------------------------------
+                         data arrival                           4.113    
+                         clock arrival                          1.443    
+  -------------------------------------------------------------------
+                         relative delay                         2.670    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.107     3.987    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X105Y110       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_reg_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X105Y110       FDRE (Prop_GFF2_SLICEM_C_Q)
+                                                      0.060     4.047 r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_reg_reg[14]/Q
+                         net (fo=4, routed)           0.086     4.133    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_reg_reg[14]
+    SLICE_X105Y111       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.405     1.648    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/userclk2_out
+    SLICE_X105Y111       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[14]/C
+                         clock pessimism              0.000     1.648    
+    SLICE_X105Y111       FDRE (Hold_CFF2_SLICEM_C_D)
+                                                      0.062     1.710    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[14]
+  -------------------------------------------------------------------
+                         data arrival                           4.133    
+                         clock arrival                          1.710    
+  -------------------------------------------------------------------
+                         relative delay                         2.423    
+
+
+
+Id: 6
+set_bus_skew -from [get_cells -quiet {core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[*]}] -to [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 15
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+txoutclk_out[0]       clk_125mhz_mmcm_out   core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[5]/D
+                                                                            core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[8]/D
+                                                                                                            Slow         0.647      7.353
+
+
+Slack (MET) :             7.353ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Endpoint Destination:   core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Source:       core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Destination:  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:   -1.788ns
+  Reference Relative Delay:  -2.251ns
+  Relative CRPR:             -0.185ns
+  Actual Bus Skew:            0.647ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.404     1.647    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/userclk2_out
+    SLICE_X105Y114       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X105Y114       FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.079     1.726 r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[5]/Q
+                         net (fo=1, routed)           0.492     2.218    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg_n_0_[5]
+    SLICE_X107Y114       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.101     3.981    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X107Y114       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[5]/C
+                         clock pessimism              0.000     3.981    
+    SLICE_X107Y114       FDRE (Setup_AFF_SLICEL_C_D)
+                                                      0.025     4.006    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[5]
+  -------------------------------------------------------------------
+                         data arrival                           2.218    
+                         clock arrival                          4.006    
+  -------------------------------------------------------------------
+                         relative delay                        -1.788    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.197     1.410    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/userclk2_out
+    SLICE_X108Y112       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X108Y112       FDRE (Prop_CFF_SLICEL_C_Q)
+                                                      0.058     1.468 r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[8]/Q
+                         net (fo=1, routed)           0.071     1.539    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg_n_0_[8]
+    SLICE_X108Y112       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.379     3.728    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X108Y112       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[8]/C
+                         clock pessimism              0.000     3.728    
+    SLICE_X108Y112       FDRE (Hold_FFF2_SLICEL_C_D)
+                                                      0.062     3.790    core_inst/sfp_mac.sfp0_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[8]
+  -------------------------------------------------------------------
+                         data arrival                           1.539    
+                         clock arrival                          3.790    
+  -------------------------------------------------------------------
+                         relative delay                        -2.251    
+
+
+
+Id: 7
+set_bus_skew -from [get_cells {{core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[*]}}] -to [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 15
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+txoutclk_out[0]       clk_125mhz_mmcm_out   core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[0]/D
+                                                                            core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[11]/D
+                                                                                                            Slow         0.970      7.030
+
+
+Slack (MET) :             7.030ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Endpoint Destination:   core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Source:       core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Destination:  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:   -1.467ns
+  Reference Relative Delay:  -2.198ns
+  Relative CRPR:             -0.239ns
+  Actual Bus Skew:            0.970ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.435     1.678    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/userclk2_out
+    SLICE_X102Y132       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X102Y132       FDRE (Prop_GFF2_SLICEL_C_Q)
+                                                      0.081     1.759 r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[0]/Q
+                         net (fo=1, routed)           0.759     2.518    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_0[0]
+    SLICE_X102Y132       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.080     3.960    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X102Y132       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[0]/C
+                         clock pessimism              0.000     3.960    
+    SLICE_X102Y132       FDRE (Setup_DFF2_SLICEL_C_D)
+                                                      0.025     3.985    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[0]
+  -------------------------------------------------------------------
+                         data arrival                           2.518    
+                         clock arrival                          3.985    
+  -------------------------------------------------------------------
+                         relative delay                        -1.467    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.244     1.457    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/userclk2_out
+    SLICE_X106Y131       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X106Y131       FDRE (Prop_CFF_SLICEL_C_Q)
+                                                      0.058     1.515 r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[11]/Q
+                         net (fo=1, routed)           0.045     1.560    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_0[11]
+    SLICE_X106Y130       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.347     3.696    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X106Y130       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[11]/C
+                         clock pessimism              0.000     3.696    
+    SLICE_X106Y130       FDRE (Hold_HFF2_SLICEL_C_D)
+                                                      0.062     3.758    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[11]
+  -------------------------------------------------------------------
+                         data arrival                           1.560    
+                         clock arrival                          3.758    
+  -------------------------------------------------------------------
+                         relative delay                        -2.198    
+
+
+
+Id: 8
+set_bus_skew -from [get_cells -quiet {core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[*]}] -to [get_cells {core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 15
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_125mhz_mmcm_out   txoutclk_out[0]       core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[2]/D
+                                                                            core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[14]/D
+                                                                                                            Slow         0.626      7.374
+
+
+Slack (MET) :             7.374ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Endpoint Destination:   core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Source:       core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Destination:  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:    2.785ns
+  Reference Relative Delay:   2.398ns
+  Relative CRPR:             -0.240ns
+  Actual Bus Skew:            0.626ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.346     3.695    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X103Y129       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X103Y129       FDRE (Prop_GFF_SLICEL_C_Q)
+                                                      0.079     3.774 r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[2]/Q
+                         net (fo=1, routed)           0.504     4.278    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg[2]
+    SLICE_X104Y131       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.255     1.468    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/userclk2_out
+    SLICE_X104Y131       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[2]/C
+                         clock pessimism              0.000     1.468    
+    SLICE_X104Y131       FDRE (Setup_AFF2_SLICEM_C_D)
+                                                      0.025     1.493    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[2]
+  -------------------------------------------------------------------
+                         data arrival                           4.278    
+                         clock arrival                          1.493    
+  -------------------------------------------------------------------
+                         relative delay                         2.785    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.086     3.966    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X106Y129       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X106Y129       FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.059     4.025 r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[14]/Q
+                         net (fo=1, routed)           0.105     4.130    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg[14]
+    SLICE_X106Y129       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.427     1.670    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/userclk2_out
+    SLICE_X106Y129       FDRE                                         r  core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[14]/C
+                         clock pessimism              0.000     1.670    
+    SLICE_X106Y129       FDRE (Hold_BFF2_SLICEL_C_D)
+                                                      0.062     1.732    core_inst/sfp_mac.sfp0_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[14]
+  -------------------------------------------------------------------
+                         data arrival                           4.130    
+                         clock arrival                          1.732    
+  -------------------------------------------------------------------
+                         relative delay                         2.398    
+
+
+
+Id: 9
+set_bus_skew -from [get_cells {{core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[*]}}] -to [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 6
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_125mhz_mmcm_out   txoutclk_out[0]       core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[5]/D
+                                                                            core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[3]/D
+                                                                                                            Slow         0.797      7.203
+
+
+Slack (MET) :             7.203ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Endpoint Destination:   core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Source:       core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Destination:  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:    3.048ns
+  Reference Relative Delay:   2.363ns
+  Relative CRPR:             -0.111ns
+  Actual Bus Skew:            0.797ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.321     3.670    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/clk_125mhz_int
+    SLICE_X100Y156       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X100Y156       FDRE (Prop_GFF_SLICEL_C_Q)
+                                                      0.079     3.749 r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[5]/Q
+                         net (fo=4, routed)           0.785     4.534    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/D[5]
+    SLICE_X100Y153       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.248     1.461    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/userclk2_out
+    SLICE_X100Y153       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[5]/C
+                         clock pessimism              0.000     1.461    
+    SLICE_X100Y153       FDRE (Setup_CFF2_SLICEL_C_D)
+                                                      0.025     1.486    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[5]
+  -------------------------------------------------------------------
+                         data arrival                           4.534    
+                         clock arrival                          1.486    
+  -------------------------------------------------------------------
+                         relative delay                         3.048    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.058     3.938    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/clk_125mhz_int
+    SLICE_X100Y154       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X100Y154       FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.058     3.996 r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_reg_reg[3]/Q
+                         net (fo=2, routed)           0.096     4.093    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/D[3]
+    SLICE_X100Y153       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.425     1.668    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/userclk2_out
+    SLICE_X100Y153       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[3]/C
+                         clock pessimism              0.000     1.668    
+    SLICE_X100Y153       FDRE (Hold_DFF2_SLICEL_C_D)
+                                                      0.062     1.730    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/rd_ptr_gray_sync1_reg_reg[3]
+  -------------------------------------------------------------------
+                         data arrival                           4.093    
+                         clock arrival                          1.730    
+  -------------------------------------------------------------------
+                         relative delay                         2.363    
+
+
+
+Id: 10
+set_bus_skew -from [get_cells -quiet {{core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[*]}}] -to [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 6
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+txoutclk_out[0]       clk_125mhz_mmcm_out   core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[4]/D
+                                                                            core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[5]/D
+                                                                                                            Slow         0.846      7.154
+
+
+Slack (MET) :             7.154ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Endpoint Destination:   core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Source:       core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Destination:  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:   -1.351ns
+  Reference Relative Delay:  -2.096ns
+  Relative CRPR:             -0.101ns
+  Actual Bus Skew:            0.846ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.432     1.675    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/userclk2_out
+    SLICE_X100Y155       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X100Y155       FDRE (Prop_FFF_SLICEL_C_Q)
+                                                      0.079     1.754 r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[4]/Q
+                         net (fo=2, routed)           0.868     2.622    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg_n_0_[4]
+    SLICE_X100Y158       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.068     3.948    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/clk_125mhz_int
+    SLICE_X100Y158       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[4]/C
+                         clock pessimism              0.000     3.948    
+    SLICE_X100Y158       FDRE (Setup_GFF2_SLICEL_C_D)
+                                                      0.025     3.973    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[4]
+  -------------------------------------------------------------------
+                         data arrival                           2.622    
+                         clock arrival                          3.973    
+  -------------------------------------------------------------------
+                         relative delay                        -1.351    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.253     1.466    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/userclk2_out
+    SLICE_X100Y155       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X100Y155       FDRE (Prop_GFF_SLICEL_C_Q)
+                                                      0.059     1.525 r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg[5]/Q
+                         net (fo=4, routed)           0.108     1.633    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_reg_reg_n_0_[5]
+    SLICE_X100Y158       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.318     3.667    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/clk_125mhz_int
+    SLICE_X100Y158       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[5]/C
+                         clock pessimism              0.000     3.667    
+    SLICE_X100Y158       FDRE (Hold_CFF2_SLICEL_C_D)
+                                                      0.062     3.729    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/rx_stat_fifo/wr_ptr_gray_sync1_reg_reg[5]
+  -------------------------------------------------------------------
+                         data arrival                           1.633    
+                         clock arrival                          3.729    
+  -------------------------------------------------------------------
+                         relative delay                        -2.096    
+
+
+
+Id: 11
+set_bus_skew -from [get_cells {{core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[*]}}] -to [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 6
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_125mhz_mmcm_out   txoutclk_out[0]       core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[1]/D
+                                                                            core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[4]/D
+                                                                                                            Slow         0.714      7.286
+
+
+Slack (MET) :             7.286ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Endpoint Destination:   core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Source:       core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Destination:  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:    2.794ns
+  Reference Relative Delay:   2.319ns
+  Relative CRPR:             -0.239ns
+  Actual Bus Skew:            0.714ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.276     3.625    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/clk_125mhz_int
+    SLICE_X99Y161        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X99Y161        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.079     3.704 r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[1]/Q
+                         net (fo=2, routed)           0.590     4.294    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg[1]
+    SLICE_X100Y163       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.262     1.475    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/userclk2_out
+    SLICE_X100Y163       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[1]/C
+                         clock pessimism              0.000     1.475    
+    SLICE_X100Y163       FDRE (Setup_GFF2_SLICEL_C_D)
+                                                      0.025     1.500    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[1]
+  -------------------------------------------------------------------
+                         data arrival                           4.294    
+                         clock arrival                          1.500    
+  -------------------------------------------------------------------
+                         relative delay                         2.794    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.073     3.953    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/clk_125mhz_int
+    SLICE_X101Y161       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X101Y161       FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.058     4.011 r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg_reg[4]/Q
+                         net (fo=2, routed)           0.075     4.086    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_reg[4]
+    SLICE_X101Y163       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.462     1.705    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/userclk2_out
+    SLICE_X101Y163       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[4]/C
+                         clock pessimism              0.000     1.705    
+    SLICE_X101Y163       FDRE (Hold_HFF2_SLICEL_C_D)
+                                                      0.062     1.767    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/rd_ptr_gray_sync1_reg_reg[4]
+  -------------------------------------------------------------------
+                         data arrival                           4.086    
+                         clock arrival                          1.767    
+  -------------------------------------------------------------------
+                         relative delay                         2.319    
+
+
+
+Id: 12
+set_bus_skew -from [get_cells -quiet {{core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[*]}}] -to [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 6
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+txoutclk_out[0]       clk_125mhz_mmcm_out   core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[1]/D
+                                                                            core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[2]/D
+                                                                                                            Slow         0.618      7.382
+
+
+Slack (MET) :             7.382ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Endpoint Destination:   core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Source:       core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Destination:  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:   -1.630ns
+  Reference Relative Delay:  -2.086ns
+  Relative CRPR:             -0.161ns
+  Actual Bus Skew:            0.618ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.453     1.696    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/userclk2_out
+    SLICE_X99Y162        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X99Y162        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.079     1.775 r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[1]/Q
+                         net (fo=2, routed)           0.569     2.344    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg[1]
+    SLICE_X100Y161       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.069     3.949    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/clk_125mhz_int
+    SLICE_X100Y161       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[1]/C
+                         clock pessimism              0.000     3.949    
+    SLICE_X100Y161       FDRE (Setup_DFF2_SLICEL_C_D)
+                                                      0.025     3.974    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[1]
+  -------------------------------------------------------------------
+                         data arrival                           2.344    
+                         clock arrival                          3.974    
+  -------------------------------------------------------------------
+                         relative delay                        -1.630    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.265     1.478    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/userclk2_out
+    SLICE_X101Y162       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X101Y162       FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.059     1.537 r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg_reg[2]/Q
+                         net (fo=2, routed)           0.109     1.647    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_reg[2]
+    SLICE_X100Y161       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.322     3.671    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/clk_125mhz_int
+    SLICE_X100Y161       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[2]/C
+                         clock pessimism              0.000     3.671    
+    SLICE_X100Y161       FDRE (Hold_CFF2_SLICEL_C_D)
+                                                      0.062     3.733    core_inst/sfp_mac.sfp1_eth_mac_inst/eth_mac_1g_inst/stats.mac_stats_inst/tx_stat_fifo/wr_ptr_gray_sync1_reg_reg[2]
+  -------------------------------------------------------------------
+                         data arrival                           1.647    
+                         clock arrival                          3.733    
+  -------------------------------------------------------------------
+                         relative delay                        -2.086    
+
+
+
+Id: 13
+set_bus_skew -from [get_cells {{core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_reg_reg[*]}}] -to [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 15
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_125mhz_mmcm_out   txoutclk_out[0]       core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[14]/D
+                                                                            core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[6]/D
+                                                                                                            Slow         0.794      7.206
+
+
+Slack (MET) :             7.206ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_reg_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Endpoint Destination:   core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Source:       core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_reg_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Destination:  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:    2.877ns
+  Reference Relative Delay:   2.323ns
+  Relative CRPR:             -0.240ns
+  Actual Bus Skew:            0.794ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.333     3.682    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X104Y169       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_reg_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X104Y169       FDRE (Prop_CFF2_SLICEM_C_Q)
+                                                      0.077     3.759 r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_reg_reg[14]/Q
+                         net (fo=4, routed)           0.613     4.372    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_reg_reg[14]
+    SLICE_X104Y170       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.257     1.470    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/userclk2_out
+    SLICE_X104Y170       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[14]/C
+                         clock pessimism              0.000     1.470    
+    SLICE_X104Y170       FDRE (Setup_CFF2_SLICEM_C_D)
+                                                      0.025     1.495    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[14]
+  -------------------------------------------------------------------
+                         data arrival                           4.372    
+                         clock arrival                          1.495    
+  -------------------------------------------------------------------
+                         relative delay                         2.877    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.074     3.954    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X102Y174       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_reg_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X102Y174       FDRE (Prop_CFF_SLICEL_C_Q)
+                                                      0.058     4.012 r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_reg_reg[6]/Q
+                         net (fo=1, routed)           0.072     4.084    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_reg_reg_n_0_[6]
+    SLICE_X102Y174       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.457     1.700    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/userclk2_out
+    SLICE_X102Y174       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[6]/C
+                         clock pessimism              0.000     1.700    
+    SLICE_X102Y174       FDRE (Hold_HFF2_SLICEL_C_D)
+                                                      0.062     1.762    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[6]
+  -------------------------------------------------------------------
+                         data arrival                           4.084    
+                         clock arrival                          1.762    
+  -------------------------------------------------------------------
+                         relative delay                         2.323    
+
+
+
+Id: 14
+set_bus_skew -from [get_cells -quiet {core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[*]}] -to [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 15
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+txoutclk_out[0]       clk_125mhz_mmcm_out   core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[12]/D
+                                                                            core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[6]/D
+                                                                                                            Slow         0.550      7.450
+
+
+Slack (MET) :             7.450ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Endpoint Destination:   core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Source:       core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Destination:  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:   -1.748ns
+  Reference Relative Delay:  -2.113ns
+  Relative CRPR:             -0.186ns
+  Actual Bus Skew:            0.550ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.418     1.661    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/userclk2_out
+    SLICE_X103Y170       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X103Y170       FDRE (Prop_CFF_SLICEL_C_Q)
+                                                      0.079     1.740 r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[12]/Q
+                         net (fo=1, routed)           0.497     2.237    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg_n_0_[12]
+    SLICE_X103Y170       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.080     3.960    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X103Y170       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[12]/C
+                         clock pessimism              0.000     3.960    
+    SLICE_X103Y170       FDRE (Setup_EFF_SLICEL_C_D)
+                                                      0.025     3.985    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[12]
+  -------------------------------------------------------------------
+                         data arrival                           2.237    
+                         clock arrival                          3.985    
+  -------------------------------------------------------------------
+                         relative delay                        -1.748    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.254     1.467    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/userclk2_out
+    SLICE_X104Y174       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X104Y174       FDRE (Prop_CFF_SLICEM_C_Q)
+                                                      0.058     1.525 r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[6]/Q
+                         net (fo=1, routed)           0.116     1.641    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg_n_0_[6]
+    SLICE_X103Y173       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.343     3.692    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X103Y173       FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[6]/C
+                         clock pessimism              0.000     3.692    
+    SLICE_X103Y173       FDRE (Hold_FFF2_SLICEL_C_D)
+                                                      0.062     3.754    core_inst/sfp_mac.sfp1_eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[6]
+  -------------------------------------------------------------------
+                         data arrival                           1.641    
+                         clock arrival                          3.754    
+  -------------------------------------------------------------------
+                         relative delay                        -2.113    
+
+
+
+Id: 15
+set_bus_skew -from [get_cells {{core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_reg_reg[*]} {core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[*]}}] -to [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 15
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+txoutclk_out[0]       clk_125mhz_mmcm_out   core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[1]/D
+                                                                            core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[10]/D
+                                                                                                            Slow         0.481      7.519
+
+
+Slack (MET) :             7.519ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Endpoint Destination:   core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Source:       core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Destination:  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:   -1.739ns
+  Reference Relative Delay:  -2.032ns
+  Relative CRPR:             -0.188ns
+  Actual Bus Skew:            0.481ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.465     1.708    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/userclk2_out
+    SLICE_X97Y171        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X97Y171        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.079     1.787 r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[1]/Q
+                         net (fo=1, routed)           0.416     2.203    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg[1]
+    SLICE_X96Y171        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.036     3.917    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X96Y171        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[1]/C
+                         clock pessimism              0.000     3.917    
+    SLICE_X96Y171        FDRE (Setup_HFF2_SLICEM_C_D)
+                                                      0.025     3.942    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[1]
+  -------------------------------------------------------------------
+                         data arrival                           2.203    
+                         clock arrival                          3.942    
+  -------------------------------------------------------------------
+                         relative delay                        -1.739    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.297     1.510    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/userclk2_out
+    SLICE_X96Y167        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X96Y167        FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.058     1.568 r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg_reg[10]/Q
+                         net (fo=1, routed)           0.109     1.677    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_reg[10]
+    SLICE_X95Y168        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.298     3.647    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X95Y168        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[10]/C
+                         clock pessimism              0.000     3.647    
+    SLICE_X95Y168        FDRE (Hold_HFF2_SLICEL_C_D)
+                                                      0.062     3.709    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_reg[10]
+  -------------------------------------------------------------------
+                         data arrival                           1.677    
+                         clock arrival                          3.709    
+  -------------------------------------------------------------------
+                         relative delay                        -2.032    
+
+
+
+Id: 16
+set_bus_skew -from [get_cells -quiet {core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[*]}] -to [get_cells {core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[*]}] 8.000
+Requirement: 8.000ns
+Endpoints: 15
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_125mhz_mmcm_out   txoutclk_out[0]       core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[12]/D
+                                                                            core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[4]/D
+                                                                                                            Slow         0.554      7.446
+
+
+Slack (MET) :             7.446ns  (requirement - actual skew)
+  Endpoint Source:        core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Endpoint Destination:   core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Reference Source:       core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_125mhz_mmcm_out)
+  Reference Destination:  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by txoutclk_out[0])
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:    2.676ns
+  Reference Relative Delay:   2.263ns
+  Relative CRPR:             -0.140ns
+  Actual Bus Skew:            0.554ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.100     0.100    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.669     0.769 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.819    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.819 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.203    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.127     1.076 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.245     1.321    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.349 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.282     3.631    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X95Y169        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X95Y169        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.079     3.710 r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[12]/Q
+                         net (fo=1, routed)           0.498     4.208    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg[12]
+    SLICE_X95Y169        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.099     0.099    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.114     0.213 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.294     1.507    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/userclk2_out
+    SLICE_X95Y169        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[12]/C
+                         clock pessimism              0.000     1.507    
+    SLICE_X95Y169        FDRE (Setup_EFF_SLICEL_C_D)
+                                                      0.025     1.532    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[12]
+  -------------------------------------------------------------------
+                         data arrival                           4.208    
+                         clock arrival                          1.532    
+  -------------------------------------------------------------------
+                         relative delay                         2.676    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_125mhz_mmcm_out rise edge)
+                                                      0.000     0.000 r  
+    H9                                                0.000     0.000 r  clk_125mhz_p (IN)
+                         net (fo=0)                   0.079     0.079    clk_125mhz_ibufg_inst/I
+    HPIOBDIFFINBUF_X1Y130
+                         DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.558     0.637 r  clk_125mhz_ibufg_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.677    clk_125mhz_ibufg_inst/OUT
+    H9                   IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.677 r  clk_125mhz_ibufg_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.010    clk_125mhz_ibufg
+    MMCM_X1Y5            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.630     1.640 r  clk_mmcm_inst/CLKOUT0
+                         net (fo=1, routed)           0.216     1.856    clk_125mhz_mmcm_out
+    BUFGCE_X1Y137        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.880 r  clk_125mhz_bufg_inst/O
+    X2Y3 (CLOCK_ROOT)    net (fo=1806, routed)        2.029     3.910    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/clk_125mhz_int
+    SLICE_X95Y171        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X95Y171        FDRE (Prop_CFF_SLICEL_C_Q)
+                                                      0.058     3.968 r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_reg[4]/Q
+                         net (fo=1, routed)           0.071     4.039    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg[4]
+    SLICE_X95Y171        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock txoutclk_out[0] rise edge)
+                                                      0.000     0.000 r  
+    GTHE4_CHANNEL_X0Y10  GTHE4_CHANNEL                0.000     0.000 r  sfp_phy.sfp0_pcspma/inst/pcs_pma_block_i/transceiver_inst/basex_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.basex_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK
+                         net (fo=4, routed)           0.113     0.113    sfp_phy.sfp0_pcspma/inst/core_clocking_i/txoutclk
+    BUFG_GT_X0Y71        BUFG_GT (Prop_BUFG_GT_I_O)
+                                                      0.130     0.243 r  sfp_phy.sfp0_pcspma/inst/core_clocking_i/usrclk2_bufg_inst/O
+    X3Y1 (CLOCK_ROOT)    net (fo=2401, routed)        1.471     1.714    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/userclk2_out
+    SLICE_X95Y171        FDRE                                         r  core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[4]/C
+                         clock pessimism              0.000     1.714    
+    SLICE_X95Y171        FDRE (Hold_FFF2_SLICEL_C_D)
+                                                      0.062     1.776    core_inst/sfp_mac.sfp1_eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_commit_sync_reg_reg[4]
+  -------------------------------------------------------------------
+                         data arrival                           4.039    
+                         clock arrival                          1.776    
+  -------------------------------------------------------------------
+                         relative delay                         2.263    
+
+
+
