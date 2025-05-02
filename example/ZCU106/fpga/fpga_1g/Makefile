@@ -12,31 +12,31 @@ FPGA_TOP = fpga
 FPGA_ARCH = zynquplus
 
 # Files for synthesis
-SYN_FILES = ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/example/ZCU106/fpga/rtl/fpga.sv
-SYN_FILES += ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/example/ZCU106/fpga/rtl/fpga_core.sv
-SYN_FILES += ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/rtl/eth/taxi_eth_mac_1g_fifo.f
-SYN_FILES += ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/rtl/xfcp/taxi_xfcp_if_uart.f
-SYN_FILES += ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/rtl/xfcp/taxi_xfcp_switch.sv
-SYN_FILES += ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/rtl/xfcp/taxi_xfcp_mod_stats.f
-SYN_FILES += ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/rtl/sync/taxi_sync_reset.sv
-SYN_FILES += ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/rtl/sync/taxi_sync_signal.sv
-SYN_FILES += ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/rtl/io/taxi_debounce_switch.sv
+SYN_FILES = ~/OneDrive/taxi/example/ZCU106/fpga/rtl/fpga.sv
+SYN_FILES += ~/OneDrive/taxi/example/ZCU106/fpga/rtl/fpga_core.sv
+SYN_FILES += ~/OneDrive/taxi/rtl/eth/taxi_eth_mac_1g_fifo.f
+SYN_FILES += ~/OneDrive/taxi/rtl/xfcp/taxi_xfcp_if_uart.f
+SYN_FILES += ~/OneDrive/taxi/rtl/xfcp/taxi_xfcp_switch.sv
+SYN_FILES += ~/OneDrive/taxi/rtl/xfcp/taxi_xfcp_mod_stats.f
+SYN_FILES += ~/OneDrive/taxi/rtl/sync/taxi_sync_reset.sv
+SYN_FILES += ~/OneDrive/taxi/rtl/sync/taxi_sync_signal.sv
+SYN_FILES += ~/OneDrive/taxi/rtl/io/taxi_debounce_switch.sv
 
 # XDC files
-XDC_FILES = ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/example/ZCU106/fpga/fpga.xdc
-XDC_FILES += ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/syn/vivado/taxi_eth_mac_fifo.tcl
-XDC_FILES += ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/syn/vivado/taxi_axis_async_fifo.tcl
-XDC_FILES += ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/syn/vivado/taxi_sync_reset.tcl
-XDC_FILES += ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/syn/vivado/taxi_sync_signal.tcl
+XDC_FILES = ~/OneDrive/taxi/example/ZCU106/fpga/fpga.xdc
+XDC_FILES += ~/OneDrive/taxi/syn/vivado/taxi_eth_mac_fifo.tcl
+XDC_FILES += ~/OneDrive/taxi/syn/vivado/taxi_axis_async_fifo.tcl
+XDC_FILES += ~/OneDrive/taxi/syn/vivado/taxi_sync_reset.tcl
+XDC_FILES += ~/OneDrive/taxi/syn/vivado/taxi_sync_signal.tcl
 
 # IP
-IP_TCL_FILES = ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/example/ZCU106/fpga/ip/basex_pcs_pma_0.tcl
-IP_TCL_FILES += ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/example/ZCU106/fpga/ip/basex_pcs_pma_1.tcl
+IP_TCL_FILES = ~/OneDrive/taxi/example/ZCU106/fpga/ip/basex_pcs_pma_0.tcl
+IP_TCL_FILES += ~/OneDrive/taxi/example/ZCU106/fpga/ip/basex_pcs_pma_1.tcl
 
 # Configuration
 CONFIG_TCL_FILES = ./config.tcl
 
-include ~/OneDrive/Documents/UCSD/SP25/CSE145/taxi/example/ZCU106/fpga/common/vivado.mk
+include ~/OneDrive/taxi/example/ZCU106/fpga/common/vivado.mk
 
 program: $(FPGA_TOP).bit
 	echo "open_hw_manager" > program.tcl
